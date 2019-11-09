@@ -1,0 +1,23 @@
+{
+  "name": "formacion-online-risotto-de-setas-barbara-chaves",
+  "version": "1.0.0",
+  "description": "recipe book",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adalab/formacion-online-risotto-de-setas-barbara-chaves.git"
+  },
+  "author": "barbara chaves",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Adalab/formacion-online-risotto-de-setas-barbara-chaves/issues"
+  },
+  "homepage": "https://github.com/Adalab/formacion-online-risotto-de-setas-barbara-chaves#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  }
+}
