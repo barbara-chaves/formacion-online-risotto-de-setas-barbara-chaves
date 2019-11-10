@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adalab Web Starter Kit</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="icon" href="./favicon.png" />
+    <link rel="stylesheet" href="../assets/scss/main.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="container border mt-3 pt-4">
+        <head class="head">
+          <div class="container">
+            <p class="header__ingredients m-0">Ingredientes</p>
+            <h1 class="header__title">Nombre del Plato</h1>
+            <div class="row header__buttons">
+              <div class="col-xs-6">
+                <button class="btn btn-outline-primary btn-sm border-0">
+                  Seleccionar todo
+                </button>
+              </div>
+              <div class="col-xs-6">
+                <button class="btn btn-outline-primary btn-sm border-0">
+                  Deseleccionar todo
+                </button>
+              </div>
+            </div>
+          </div>
+        </head>
+        <hr />
+        <main class="main">
+          <div class="container-fluid">
+            <section class="articles-section">
+              <ul class="ingredients"></ul>
+            </section>
+            <hr />
+            <section class="buy-section"></section>
+          </div>
+        </main>
+      </div>
+      <partial src="_main.html" label="Main"></partial>
+    </div>
+  </body>
+  <script src="../assets/js/main.js" type="module"></script>
+</html>
