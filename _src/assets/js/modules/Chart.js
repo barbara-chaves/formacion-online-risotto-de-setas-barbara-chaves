@@ -30,7 +30,7 @@ export default class Chart {
   }
   
   get total() {
-    let total = parseFloat(this.subtotal) + this.shippingCost;
+    let total = parseFloat(this.subtotal) + parseFloat(this.shippingCost);
     return parseFloat(total).toFixed(2);
   }
 
