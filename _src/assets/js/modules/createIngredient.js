@@ -1,15 +1,15 @@
 const ingredients = document.querySelector(".ingredients");
 
-
 export default function createIngredient({
   product,
   brand,
   items,
   quantity,
   cost,
-  id
-}) {
-  const isChecked = () => items === 0 ? "" : "checked";
+  id,
+  checked
+}, currency) {
+  const isChecked = () => checked ? "checked" : "";
   const ingredient = document.createElement("li");
   ingredient.classList.add("list-group");
 
@@ -19,7 +19,7 @@ export default function createIngredient({
         <input class='item__checkbox' type="checkbox" ${isChecked()}  />
       </div>
       <div class="col-2">
-        <input class='item__items' type="number" value=${parseInt(
+        <input class='item__items' type="number" min='0' value=${parseInt(
           items
         )} style="width: 40px"/>
       </div>
@@ -35,7 +35,7 @@ export default function createIngredient({
         </div>
       </div>
       <div class='col-4' >
-        <p class='text-right item__price'>${cost}€</p>
+        <p class='text-right item__price'>${cost}${currency}</p>
       </div>
     </div>
    `);
