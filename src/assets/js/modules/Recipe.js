@@ -1,25 +1,25 @@
-"use strict";
-import getData from "./modules/getData.js";
-import Ingredients from "./modules/Ingredients.js";
-import Chart from "./modules/Chart.js";
+import getData from "./getData.js";
+import Ingredients from "./Ingredients.js";
+import Cart from "./Cart.js";
 
-class App {
+// fetch('../../../data/data.json').then(response => response.json()).then(data => console.log(data))
+
+export default class Recipe {
   constructor() {
     this.ingredients = [];
-    this.chart = {};
+    this.cart = {};
+    this.getData = getData;
     this.onChangeCheckBox = this.onChangeCheckBox.bind(this);
     this.onChangeInput = this.onChangeInput.bind(this);
     this.onSelect = this.onSelect.bind(this);
   }
 
-  getData = getData;
-
   async initApp() {
     const data = await this.getData();
     this.ingredients = new Ingredients(data.ingredients);
-    this.chart = new Chart(data, this.ingredients.ingredients);
-    this.ingredients.renderIngredients(this.ingredients.ingredients, this.chart.currency);
-    this.chart.renderChart(this.chart);
+    this.cart = new Cart(data, this.ingredients.ingredients);
+    this.ingredients.renderIngredients(this.ingredients.ingredients, this.cart.currency);
+    this.cart.renderCart(this.cart);
     this.addEvents();
   }
 
@@ -30,8 +30,8 @@ class App {
 
   updateApp() {
     this.clearApp();
-    this.ingredients.renderIngredients(this.ingredients.ingredients, this.chart.currency);
-    this.chart.renderChart(this.chart);
+    this.ingredients.renderIngredients(this.ingredients.ingredients, this.cart.currency);
+    this.cart.renderCart(this.cart);
     this.addEvents();
   }
 
@@ -100,7 +100,3 @@ class App {
     this.addSelectAllEvent();
   }
 }
-
-const app = new App();
-
-app.initApp();

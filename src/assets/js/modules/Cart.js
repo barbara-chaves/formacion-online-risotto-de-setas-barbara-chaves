@@ -1,9 +1,10 @@
-import createChart from "./createChart.js";
+import createCart from "./createCart.js";
 
-export default class Chart {
+export default class Cart {
   constructor(recipe, ingredients) {
     this._ingredients = ingredients;
     this._recipe = recipe;
+    this.createCart = createCart;
   }
 
   get currency() {
@@ -34,9 +35,8 @@ export default class Chart {
     return parseFloat(total).toFixed(2);
   }
 
-  createChart = createChart;
 
-  renderChart(chart) {
-    createChart(chart);
+  renderCart(cart) {
+    createCart(cart);
   }
 }

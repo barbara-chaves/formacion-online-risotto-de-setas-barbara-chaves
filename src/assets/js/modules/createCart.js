@@ -1,9 +1,9 @@
 const buy = document.querySelector(".buy-section");
 
-export default function createChart({currency, items, subtotal, shippingCost, total}) {
-  const chart = document.createElement("div");
-  chart.classList.add("chart", "card-body", "pr-5", "pl-5");
-  chart.innerHTML = `<div class="total">
+export default function createCart({currency, items, subtotal, shippingCost, total}) {
+  const cart = document.createElement("div");
+  cart.classList.add("cart", "card-body", "pr-5", "pl-5");
+  cart.innerHTML = `<div class="total">
       <div class='pb-4'>
         <small id="items">
           <span >Items: </span>
@@ -26,5 +26,5 @@ export default function createChart({currency, items, subtotal, shippingCost, to
         <button class="btn btn-success w-100" id="buy">Comprar ingredienes: ${total} ${currency}</button>
       </div>
     </div>`;
-  buy.appendChild(chart);
+  buy.appendChild(cart);
 }

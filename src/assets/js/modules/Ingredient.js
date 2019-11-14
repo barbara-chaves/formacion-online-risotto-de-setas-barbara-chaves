@@ -6,9 +6,9 @@ export default class Ingredient {
     this.product = ingredient.product;
     this.quantity = ingredient.quantity;
     this.id = index;
+    this.checked = true;
   }
   
-  checked = true;
 
   set check(ischecked) {
     this.checked = ischecked;

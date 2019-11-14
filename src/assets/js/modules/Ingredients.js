@@ -6,9 +6,9 @@ export default class Ingredients {
     this.ingredients = ingredients.map(
       (ingredient, index) => new Ingredient(ingredient, index)
     );
+    this.createIngredient = createIngredient;
   }
 
-  createIngredient = createIngredient;
 
   renderIngredients(ingredients, currency) {
     ingredients.forEach(ingredient => {

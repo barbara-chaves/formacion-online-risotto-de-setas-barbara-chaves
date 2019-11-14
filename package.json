@@ -1,37 +1,28 @@
 {
-	"name": "AdalabWebStarterKit",
-	"version": "2.0.2",
-	"description": "Adalab web starter kit",
-	"dependencies": {
-		"browser-sync": "^2.26.7",
-		"del": "^3.0.0",
-		"eslint": "^4.19.1",
-		"gulp": "^4",
-		"gulp-autoprefixer": "*",
-		"gulp-clean-css": "*",
-		"gulp-combine-mq": "*",
-		"gulp-concat": "*",
-		"gulp-html-partial": "^1.0.1",
-		"gulp-notify": "*",
-		"gulp-plumber": "*",
-		"gulp-rename": "*",
-		"gulp-sass": "^4.0.2",
-		"gulp-sourcemaps": "*",
-		"gulp-uglify-es": "^1.0.4",
-		"gulp-zip": "*",
-		"run-sequence": "*"
-	},
-	"scripts": {
-		"start": "gulp",
-		"docs": "rm -rf docs && gulp docs",
-		"push-docs": "rm -rf docs && gulp docs && git add docs/* && git commit -m \"Update docs\" && git push",
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+ssh://git@github.com:Adalab/Adalab-web-starter-kit.git"
-	},
-	"author": "Adalab",
-	"license": "MIT",
-	"homepage": "https://github.com/Adalab/Adalab-web-starter-kit"
+  "name": "formacion-online-risotto-de-setas-barbara-chaves",
+  "version": "1.0.0",
+  "description": "![Adalab](_src/assets/images/logo-adalab-80px.png) # Adalab web starter kit Ahoy! Esta es nuestro Starter Kit en node/gulp para este primer contacto con el desarrollo web Incluye SCSS, un sistema de plantillas HTMl y un web server.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adalab/formacion-online-risotto-de-setas-barbara-chaves.git"
+  },
+  "author": "Bárbara Chaves Barcellos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Adalab/formacion-online-risotto-de-setas-barbara-chaves/issues"
+  },
+  "homepage": "https://github.com/Adalab/formacion-online-risotto-de-setas-barbara-chaves#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  }
 }
