@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/Adalab/formacion-online-risotto-de-setas-barbara-chaves/issues"
   },
-  "homepage": "https://github.com/Adalab/formacion-online-risotto-de-setas-barbara-chaves#readme",
+  "homepage": "./",
   "devDependencies": {
     "@babel/core": "^7.7.2",
     "@babel/preset-env": "^7.7.1",
